@@ -1,0 +1,17 @@
+{
+  "bail": false,
+  "verbose": true,
+  "testRegex": ".*/test/.*test\\.(js|jsx)$",
+  "roots": ["<rootDir>/lib", "<rootDir>/test"],
+  "modulePaths": ["<rootDir>/lib", "<rootDir>/test"],
+  "modulePathIgnorePatterns": ["lib/package.json"],
+  "collectCoverage": false,
+  "coveragePathIgnorePatterns": ["/node_modules/"],
+  "testEnvironmentOptions": {
+    "url": "http://localhost/"
+  },
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/mocks/fileMock.js"
+  },
+  "setupFilesAfterEnv": ["./jest.setup.js"]
+}
